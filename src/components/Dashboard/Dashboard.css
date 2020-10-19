@@ -1,0 +1,26 @@
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dashboard-cart {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dashboard-cart-item {
+    display: flex;
+    color: #fff;
+}
+
+.dashboard-table{
+    height: 500px;
+    padding: 5%;
+    box-shadow: 0px 2px 5px lightgray;
+    border-radius: 10px;
+}
+
+.dashboard-table-top {
+    display: flex;
+    justify-content: space-between;
+}

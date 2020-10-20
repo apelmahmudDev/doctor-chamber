@@ -11,7 +11,7 @@ const Home = () => {
                         <h1>Your New Smile Here</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni assumenda unde repellat, modi in id suscipit corporis fugiat excepturi vero tempora incidunt amet odio eius, ipsam ea veritatis quos ab.</p>
                         
-                        <Link to="/bookAppointment">
+                        <Link to="/booking">
                             <button className="btn btn-primary text-uppercase">Get appointment</button>
                         </Link>
                     </div>

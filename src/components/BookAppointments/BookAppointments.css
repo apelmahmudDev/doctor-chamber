@@ -1,0 +1,12 @@
+.showAppointment-container {
+    background-image: url('../../images/background.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.card-deck {
+    text-align: center;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+}

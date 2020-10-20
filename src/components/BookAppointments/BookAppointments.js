@@ -5,12 +5,10 @@ import 'react-calendar/dist/Calendar.css';
 import AppointmentCategory from '../AppointmentCategory/AppointmentCategory';
 import { UserContext } from '../UserProvider/UserProvider';
 
-const ShowAppointment = () => {
+const BookAppointments = () => {
+    //DATE PICKER
+    const [value, onChange] = useContext(UserContext);
     const [appointments, setAppointments] = useState([]);
-    const [date, setDate] = useContext(UserContext);
-    
-    const [value, onChange] = useState(new Date());
-    setDate(value)
 
     useEffect(() => {
         fetch('http://localhost:8080/loadAppointments')
@@ -21,7 +19,7 @@ const ShowAppointment = () => {
     },[])
     
     return (
-        <div className="showAppointment-container">
+        <div className="bookAppointment-container">
             <div className="container">
                 <div className="row d-flex align-items-center" style={{height:'100vh'}}>
                     <div className="col-md-6">
@@ -45,4 +43,4 @@ const ShowAppointment = () => {
     );
 };
 
-export default ShowAppointment;
+export default BookAppointments;

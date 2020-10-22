@@ -15,9 +15,9 @@ const Navbar = () => {
                 <NavLink className="nav-item nav-link" to="/home">Home <span className="sr-only">(current)</span></NavLink>
                 <NavLink className="nav-item nav-link" to="/about">About</NavLink>
                 <NavLink className="nav-item nav-link" to="/services">Dental Services</NavLink>
-                <NavLink className="nav-item nav-link" to="/dashboard">Reviews</NavLink>
-                <NavLink className="nav-item nav-link" to="/blog">Blog</NavLink>
-                <NavLink className="nav-item nav-link" to="/contact">Contact Us</NavLink>
+                <NavLink className="nav-item nav-link text-white" to="/dashboard">Reviews</NavLink>
+                <NavLink className="nav-item nav-link text-white" to="/blog">Blog</NavLink>
+                <NavLink className="nav-item nav-link text-white" to="/contact">Contact Us</NavLink>
                 </div>
             </div>
             </nav>

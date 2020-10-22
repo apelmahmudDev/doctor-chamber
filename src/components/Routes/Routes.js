@@ -3,24 +3,23 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import Home from '../Home/Home';
-import PatientForm from '../PatientForm/PatientForm';
-import BookAppointments from '../BookAppointments/BookAppointments';
-import Navbar from '../Navbar/Navbar';
-import DashboardRoutes from '../Dashboard/DashboardRoutes/DashboardRoutes';
+import Home from '../Home/Home/Home';
+// import PatientForm from '../PatientForm/PatientForm';
+// import BookAppointments from '../BookAppointments/BookAppointments';
+// import Navbar from '../Home/Navbar/Navbar';
+// import DashboardRoutes from '../Dashboard/DashboardRoutes/DashboardRoutes';
 
 const Routes = () => {
     return (
         <Switch>
             <Route exact path="/">
-                <Navbar></Navbar>
                 <Home></Home>
             </Route>
             <Route path="/home">
-                <Navbar></Navbar>
                 <Home></Home>
             </Route>
-            <Route path="/booking">
+
+            {/* <Route path="/booking">
                 <Navbar></Navbar>
                 <BookAppointments></BookAppointments>
             </Route>
@@ -30,7 +29,7 @@ const Routes = () => {
             </Route>
             <Route path="/dashboard">
                 <DashboardRoutes></DashboardRoutes>
-            </Route>
+            </Route> */}
             <Route path="*"><h1>Not Found The Page</h1></Route>
         </Switch>
     );

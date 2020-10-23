@@ -1,0 +1,16 @@
+.testimonials {
+    background-image: url('../../../images/invert.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 150px;
+}
+
+.testimonials .card {
+    border: transparent;
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+.testimonials .card .card-footer {
+    background: transparent;
+    border: 0;
+}

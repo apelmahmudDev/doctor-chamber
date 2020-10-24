@@ -3,7 +3,9 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import Appointment from '../Appointment/Appointment/Appointment';
 import Home from '../Home/Home/Home';
+import Login from '../Login/Login';
 // import PatientForm from '../PatientForm/PatientForm';
 // import BookAppointments from '../BookAppointments/BookAppointments';
 // import Navbar from '../Home/Navbar/Navbar';
@@ -17,6 +19,12 @@ const Routes = () => {
             </Route>
             <Route path="/home">
                 <Home></Home>
+            </Route>
+            <Route path="/appointment">
+                <Appointment></Appointment>
+            </Route>
+            <Route path="/login">
+                <Login></Login>
             </Route>
 
             {/* <Route path="/booking">

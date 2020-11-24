@@ -18,27 +18,20 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointment, date }) => {
 	
 	const { register, handleSubmit, errors  } = useForm();
     const onSubmit = data => {
-		const newPatient = {
-			appointmentName: appointment.name,
-			name: data.name,
-			gender: data.gender,
-			age: data.age,
-			weight: data.weight,
-			number: data.number,
-			time: data.time,
-			date: date
-		};
+		data.appointmentName = appointment.name;
+		data.date = date;
+		data.created = new Date();
 		//INSERT PATIENT INFORMAITON AT THE DATABASE
         fetch('http://localhost:8080/patient',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify(newPatient)
+            body: JSON.stringify(data)
         })
         .then(res => res.json())
         .then(patient => {
             if(patient){
-				console.log('Appointment information has been successfully created');
 				closeModal();
+				alert('Appointment has been created successfully.');
             }
         })
     };

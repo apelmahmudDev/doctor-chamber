@@ -1,0 +1,18 @@
+.login-area {
+    padding: 5%;
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+form input {
+    margin-bottom: 15px;
+}
+
+.sign-option {
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sign-option:hover {
+    text-decoration: underline;
+}

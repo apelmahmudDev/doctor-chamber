@@ -1,14 +1,9 @@
 import React from 'react';
-import {
-    Switch,
-    Route
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Appointment from '../Appointment/Appointment/Appointment';
+import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import Home from '../Home/Home/Home';
 import Login from '../Login/Login';
-// import PatientForm from '../PatientForm/PatientForm';
-// import BookAppointments from '../BookAppointments/BookAppointments';
-// import Navbar from '../Home/Navbar/Navbar';
 // import DashboardRoutes from '../Dashboard/DashboardRoutes/DashboardRoutes';
 
 const Routes = () => {
@@ -23,18 +18,14 @@ const Routes = () => {
             <Route path="/appointment">
                 <Appointment></Appointment>
             </Route>
+            <Route path="/dashboard/appointment">
+                <Dashboard></Dashboard>
+            </Route>
             <Route path="/login">
                 <Login></Login>
             </Route>
 
-            {/* <Route path="/booking">
-                <Navbar></Navbar>
-                <BookAppointments></BookAppointments>
-            </Route>
-            <Route path="/patient-form/patient/:patientKey">
-                <Navbar></Navbar>
-                <PatientForm></PatientForm>
-            </Route>
+            {/*
             <Route path="/dashboard">
                 <DashboardRoutes></DashboardRoutes>
             </Route> */}

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({isAppointment}) => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-default">
@@ -15,9 +15,9 @@ const Navbar = () => {
                 <NavLink className="nav-item nav-link" to="/home">Home <span className="sr-only">(current)</span></NavLink>
                 <NavLink className="nav-item nav-link" to="/about">About</NavLink>
                 <NavLink className="nav-item nav-link" to="/services">Dental Services</NavLink>
-                <NavLink className="nav-item nav-link text-white" to="/dashboard">Reviews</NavLink>
-                <NavLink className="nav-item nav-link text-white" to="/blog">Blog</NavLink>
-                <NavLink className="nav-item nav-link text-white" to="/contact">Contact Us</NavLink>
+                <NavLink className={`nav-item nav-link text-${isAppointment?'secondary':'light'}`} to="/dashboard">Reviews</NavLink>
+                <NavLink className={`nav-item nav-link text-${isAppointment?'secondary':'light'}`} to="/blog">Blog</NavLink>
+                <NavLink className={`nav-item nav-link text-${isAppointment?'secondary':'light'}`} to="/contact">Contact Us</NavLink>
                 </div>
             </div>
             </nav>

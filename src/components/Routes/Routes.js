@@ -25,8 +25,8 @@ const Routes = () => {
                 <Login></Login>
             </Route>
 
-            {/*
-            <Route path="/dashboard">
+            
+            {/* <Route path="/dashboard">
                 <DashboardRoutes></DashboardRoutes>
             </Route> */}
             <Route path="*"><h1>Not Found The Page</h1></Route>

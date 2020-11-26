@@ -6,6 +6,10 @@
     color: #fff !important;
 }
 
+.brand-bg {
+    background-image: linear-gradient(75deg, #19DEAE, #0FCFEC);
+}
+
 .text-brand {
     color: #1cc7c1;
 }

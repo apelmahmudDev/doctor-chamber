@@ -61,17 +61,17 @@ const Login = () => {
         if(newUser && user.email && user.password){
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(res => {
-                // const newUserInfo = {...user };
-                // newUserInfo.isSignedIn = true;
-                // newUserInfo.success = true;
-                // setUser(newUserInfo);
+                const newUserInfo = {...user };
+                newUserInfo.isSignedIn = true;
+                newUserInfo.success = true;
+                setUser(newUserInfo);
             })
             .catch(function(error) {
-                // const newUserInfo = {...user };
-                // newUserInfo.isSignedIn = false;
-                // newUserInfo.success = false;
-                // newUserInfo.error = error.message;
-                // setUser(newUserInfo);
+                const newUserInfo = {...user };
+                newUserInfo.isSignedIn = false;
+                newUserInfo.success = false;
+                newUserInfo.error = error.message;
+                setUser(newUserInfo);
             });
         }
         event.preventDefault();

@@ -1,0 +1,12 @@
+.sidebar-nav .nav-item {
+    margin: 15px 0;
+}
+
+.sidebar-nav a{
+    color: #fff;
+}
+
+.sidebar-nav a:hover{
+    text-decoration: none;
+    color: rgb(241, 232, 232);
+}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './BookingCard.css';
-import { Link } from 'react-router-dom';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 
 const BookingCard = ({ appointment, date }) => {
@@ -21,13 +20,7 @@ const BookingCard = ({ appointment, date }) => {
                     <h5 className="card-title text-brand">{appointment.name}</h5>
                     <h6>{appointment.time}</h6>
                     <p>{appointment.space}</p>
-
-                    {/* <Link to={`/patient-form/patient/${key}`}>
-                        <button onClick={openModal} className="btn btn-brand">Book Appointment</button>
-                    </Link> */}
-
                     <button onClick={openModal} className="btn btn-brand">Book Appointment</button>
-                
                     <AppointmentForm 
                         modalIsOpen={modalIsOpen} 
                         closeModal={closeModal}

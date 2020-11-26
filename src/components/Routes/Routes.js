@@ -7,6 +7,7 @@ import Prescriptions from '../Dashboard/Prescriptions/Prescriptions';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import Home from '../Home/Home/Home';
 import Login from '../Login/Login';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const Routes = () => {
 	return (
@@ -23,9 +24,9 @@ const Routes = () => {
 			<Route path="/login">
 				<Login></Login>
 			</Route>
-            <Route path="/dashboard/dashboard">
+            <PrivateRoute path="/dashboard/dashboard">
                 <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path="/dashboard/appointments">
                 <Appointments></Appointments>
             </Route>

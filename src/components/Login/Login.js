@@ -1,28 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import loginImage from'../../images/group.png';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
+import { UserContext } from '../UserProvider/UserProvider';
+import { useHistory } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+    let history = useHistory();
+
     const [newUser, setNewUser] = useState(false);
-    const [user, setUser] = useState({
-        isSignedIn: false,
-        name: '',
-        email: '',
-        password: '',
-        success: false,
-        error: ''
-    })
+    const [user, setUser] = useContext(UserContext);
 
     const newUserHandler = () => {
         setNewUser(!newUser);
     }
-
-    console.log(user)
     
     const handleBlur = (event) => {
         let isFieldValid = true;
@@ -56,6 +51,7 @@ const Login = () => {
                 newUserInfo.success = false;
                 newUserInfo.error = error.message;
                 setUser(newUserInfo);
+                history.replace('/dashboard/dashboard');
             });
         }
         if(newUser && user.email && user.password){
@@ -65,6 +61,7 @@ const Login = () => {
                 newUserInfo.isSignedIn = true;
                 newUserInfo.success = true;
                 setUser(newUserInfo);
+                history.replace('/dashboard/dashboard');
             })
             .catch(function(error) {
                 const newUserInfo = {...user };
@@ -85,7 +82,7 @@ const Login = () => {
                         <div className="login-area ">
                             <h3 className="text-brand text-center mb-4">{newUser ? 'Login ' : 'Create an Account '}</h3>
                             <form onSubmit={handleSubmit}>
-                                <input onBlur={handleBlur} type="text" name="name" placeholder="Your Name" className="form-control" required style={{display: newUser && 'none'}}/>
+                                <input onBlur={handleBlur} type="text" name="name" placeholder="Your Name" className="form-control" style={{display: newUser && 'none'}}/>
                                 <input onBlur={handleBlur} type="email" name="email" placeholder="Your Email" className="form-control" required/>
                                 <input onBlur={handleBlur} type="password" name="password" placeholder="Password" className="form-control" required/>
                                 <button type="submit" className="btn btn-brand">Sign In</button>

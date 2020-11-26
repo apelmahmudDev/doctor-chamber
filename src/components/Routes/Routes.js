@@ -8,6 +8,7 @@ import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import Home from '../Home/Home/Home';
 import Login from '../Login/Login';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import NotFound from '../NotFound/NotFound';
 
 const Routes = () => {
 	return (
@@ -37,7 +38,7 @@ const Routes = () => {
                 <Prescriptions></Prescriptions>
             </Route>
 			<Route path="*">
-				<h1>Not Found The Page</h1>
+				<NotFound></NotFound>
 			</Route>
 		</Switch>
 	);

@@ -44,6 +44,7 @@ const Login = () => {
                 newUserInfo.isSignedIn = true;
                 newUserInfo.success = true;
                 setUser(newUserInfo);
+                history.replace('/dashboard/dashboard');
             })
             .catch(function(error) {
                 const newUserInfo = {...user };
@@ -51,7 +52,6 @@ const Login = () => {
                 newUserInfo.success = false;
                 newUserInfo.error = error.message;
                 setUser(newUserInfo);
-                history.replace('/dashboard/dashboard');
             });
         }
         if(newUser && user.email && user.password){

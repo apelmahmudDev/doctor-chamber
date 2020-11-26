@@ -1,0 +1,17 @@
+.notfound-container {
+    background: #F7F7F7;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.notfound-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notfound-child img {
+    height: 120px;
+}

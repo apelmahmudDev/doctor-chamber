@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import Spinner from '../../Shared/Spinner/Spinner';
 
 const Prescriptions = () => {
 	const [appointments, setAppointments] = useState([]);
@@ -17,7 +18,7 @@ const Prescriptions = () => {
 				<div className="col-md-10 mb-5">
 					<div className="row mt-5 ml-5">
 						<h5 className="text-brand ml-2">All Prescriptions</h5>
-						<div className="table-responsive">
+						{appointments.length ? <div className="table-responsive">
 							<table className="table table-borderless">
 								<thead>
 									<tr className="text-brand">
@@ -44,7 +45,7 @@ const Prescriptions = () => {
 									</tbody>
 								))}
 							</table>
-						</div>
+						</div> : <Spinner></Spinner>}
 					</div>
 				</div>
 			</div>

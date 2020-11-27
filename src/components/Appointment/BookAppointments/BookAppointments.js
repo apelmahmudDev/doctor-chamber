@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Spinner from '../../Shared/Spinner/Spinner';
 import BookingCard from '../BookingCard/BookingCard';
 import './BookAppointments.css';
 
@@ -17,7 +18,7 @@ const BookAppointments = ({date}) => {
         <section>
             <div className="container">
                 <h2 className="text-center text-brand mb-5 available-text">Available Applications on {date.toDateString()}</h2>
-                <div className="row">
+                {appointments.length ? <div className="row">
                     {
                         appointments.map(app => <BookingCard
                         appointment={app}
@@ -25,7 +26,7 @@ const BookAppointments = ({date}) => {
                         date={date}
                         ></BookingCard>)
                     }
-                </div>
+                </div> : <Spinner></Spinner>}
             </div>
         </section>
     );

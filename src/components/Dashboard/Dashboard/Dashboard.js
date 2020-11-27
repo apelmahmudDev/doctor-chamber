@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Spinner from '../../Shared/Spinner/Spinner';
 import Sidebar from '../Sidebar/Sidebar';
 import './Dashobard.css';
 
@@ -39,7 +40,7 @@ const Dashboard = () => {
 						</div>
 						<div className="row mt-5">
 							<h5 className="text-brand ml-2">Recent Appointments</h5>
-							<div className="table-responsive">
+							{appointments.length ? <div className="table-responsive">
 								<table className="table table-borderless">
 									<thead>
 										<tr className="text-brand">
@@ -75,7 +76,7 @@ const Dashboard = () => {
 										</tbody>
 									))}
 								</table>
-							</div>
+							</div> : <Spinner></Spinner>}
 						</div>
 					</div>
 				</div>

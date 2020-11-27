@@ -14,7 +14,7 @@ const Blogs = () => {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, accusantium?'
         },
         {
-            key: 1,
+            key: 2,
             img: person1,
             authorName: 'Dr. Caudi',
             date: '23 Apr 2020',
@@ -22,7 +22,7 @@ const Blogs = () => {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, accusantium?'
         },
         {
-            key: 1,
+            key: 3,
             img: person1,
             authorName: 'Dr. Caudi',
             date: '23 Apr 2020',

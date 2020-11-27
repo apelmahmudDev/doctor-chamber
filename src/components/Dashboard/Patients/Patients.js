@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Spinner from '../../Shared/Spinner/Spinner';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Patients = () => {
@@ -14,11 +15,11 @@ const Patients = () => {
 				<div className="col-md-2 brand-bg">
 					<Sidebar></Sidebar>
 				</div>
-				<div col-md-10>
+				<div className="col-md-10">
 					<div className="container">
 						<div className="row mt-5 ml-5">
 							<h5 className="text-brand ml-2">All Patients</h5>
-							<div className="table-responsive">
+							{appointments.length ? <div className="table-responsive">
 								<table className="table table-borderless">
 									<thead>
 										<tr className="text-brand">
@@ -45,7 +46,7 @@ const Patients = () => {
 										</tbody>
 									))}
 								</table>
-							</div>
+							</div> : <Spinner></Spinner>}
 						</div>
 					</div>
 				</div>

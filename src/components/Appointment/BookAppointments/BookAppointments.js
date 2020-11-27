@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BookingCard from '../BookingCard/BookingCard';
+import './BookAppointments.css';
 
 const BookAppointments = ({date}) => {
     
@@ -15,7 +16,7 @@ const BookAppointments = ({date}) => {
     return (
         <section>
             <div className="container">
-                <h2 className="text-center text-brand mb-5">Available Applications on {date.toDateString()}</h2>
+                <h2 className="text-center text-brand mb-5 available-text">Available Applications on {date.toDateString()}</h2>
                 <div className="row">
                     {
                         appointments.map(app => <BookingCard

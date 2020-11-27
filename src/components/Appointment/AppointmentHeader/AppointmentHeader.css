@@ -6,6 +6,7 @@
 }
 
 .react-calendar {
+    width: 100% !important;
     color: rgb(58, 66, 86);
     border-radius: 5px;
     padding: 5px;

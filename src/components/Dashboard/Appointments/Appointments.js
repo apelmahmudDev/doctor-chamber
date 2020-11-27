@@ -23,24 +23,34 @@ const Appointments = () => {
 
 	return (
 		<section>
-			<div className="container-fluid row">
-				<div className="col-md-2 brand-bg">
-					<Sidebar></Sidebar>
-				</div>
-				<div className="col-md-5">
-					<h3>Appointments</h3>
-					<Calendar onChange={handleDateChange} value={new Date()} />
-				</div>
-				<div className="col-md-5 bg-white">
-					<div className="d-flex align-items-center justify-content-between">
-						<h5 className="text-brand">Appointment {appointments.length}</h5>
-						<p className="text-brand">{selectedDate.toLocaleDateString()}</p>
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-md-2 brand-bg">
+						<Sidebar></Sidebar>
 					</div>
-					{appointments.length > 0 ? (
-						<AppointmentByDate appointments={appointments}></AppointmentByDate>
-					) : (
-						<h4 className="mt-5 text-center text-brand">No appointments</h4>
-					)}
+					<div className="col-md-10">
+						<div className="container">
+							<div className="row">
+								<div className="col-md-6">
+									<h3 className="my-5">Appointments</h3>
+									<Calendar onChange={handleDateChange} value={new Date()} />
+								</div>
+								<div className="col-md-6 bg-white my-5">
+									<div className="mb-5 d-flex align-items-center justify-content-between">
+										<h5 className="text-brand">Appointment {appointments.length}</h5>
+										<p className="text-brand">{selectedDate.toLocaleDateString()}</p>
+									</div>
+									{appointments.length > 0 ? (
+										<AppointmentByDate
+											appointments={appointments}
+										></AppointmentByDate>
+									) : (
+										<h4 className="my-5 text-center text-brand">No appointments</h4>
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

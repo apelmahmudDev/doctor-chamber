@@ -1,3 +1,7 @@
+.sidebar {
+    height: 100vh;
+}
+
 .sidebar-nav .nav-item {
     margin: 15px 0;
 }
@@ -9,4 +13,16 @@
 .sidebar-nav a:hover{
     text-decoration: none;
     color: rgb(241, 232, 232);
+}
+
+@media only screen and ( max-device-width: 767px ) {
+    .sidebar {
+        height: auto;
+    }  
+}
+
+@media only screen and ( max-width: 767px ) {
+    .sidebar {
+        height: auto;
+    }    
 }

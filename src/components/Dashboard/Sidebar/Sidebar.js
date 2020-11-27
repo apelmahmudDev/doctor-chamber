@@ -10,7 +10,7 @@ import ReplyIcon from '@material-ui/icons/Reply';
 
 const Sidebar = () => {
 	return (
-		<div className="container sticky-top" style={{ height: '100vh' }}>
+		<div className="container sticky-top sidebar">
 			<ul className="navbar-nav sidebar-nav">
 				<li className="nav-item">
 					<Link to="/dashboard/dashboard">

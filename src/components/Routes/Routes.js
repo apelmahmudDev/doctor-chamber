@@ -28,15 +28,15 @@ const Routes = () => {
             <PrivateRoute path="/dashboard/dashboard">
                 <Dashboard></Dashboard>
             </PrivateRoute>
-            <Route path="/dashboard/appointments">
+            <PrivateRoute path="/dashboard/appointments">
                 <Appointments></Appointments>
-            </Route>
-            <Route path="/dashboard/patients">
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/patients">
                 <Patients></Patients>
-            </Route>
-            <Route path="/dashboard/prescriptions">
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/prescriptions">
                 <Prescriptions></Prescriptions>
-            </Route>
+            </PrivateRoute>
 			<Route path="*">
 				<NotFound></NotFound>
 			</Route>

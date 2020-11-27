@@ -15,3 +15,9 @@
 .info-card-icon {
     font-size: 40px;
 }
+
+@media only screen and (max-width: 767px) {
+    .info-container {
+        margin-top: 1em;
+    }
+}

@@ -5,7 +5,7 @@ import Calendar from 'react-calendar';
 
 const AppointmentHeader = ({handleDateChange}) => {
     return (
-        <main className="appointment-header">
+        <main className="appointment-header overflow-hidden">
             <div className="row d-flex align-items-center" style={{height:'600px'}}>
                 <div className="col-md-4 offset-1 mb-5">
                     <h2 className="mb-4" style={{color:'#3A4256'}}>Appointment</h2>

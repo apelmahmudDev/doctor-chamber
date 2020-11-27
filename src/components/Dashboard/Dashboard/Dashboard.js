@@ -12,7 +12,7 @@ const Dashboard = () => {
 		{ id: 4, status: 'Total  Patients', number: '76', bg: 'warning' },
 	];
 	useEffect(() => {
-		fetch('http://localhost:8080/allPatients')
+		fetch('https://peaceful-wave-68888.herokuapp.com/allPatients')
 			.then((res) => res.json())
 			.then((data) => setAppointments(data));
 	}, []);

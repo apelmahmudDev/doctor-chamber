@@ -7,7 +7,7 @@ const BookAppointments = ({date}) => {
     
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:8080/loadAppointments')
+        fetch('https://peaceful-wave-68888.herokuapp.com/loadAppointments')
         .then(res => res.json())
         .then(data => {
             setAppointments(data);

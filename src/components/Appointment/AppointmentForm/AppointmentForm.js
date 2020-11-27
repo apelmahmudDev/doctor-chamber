@@ -22,7 +22,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointment, date }) => {
 		data.date = date;
 		data.created = new Date();
 		//INSERT PATIENT INFORMAITON AT THE DATABASE
-        fetch('http://localhost:8080/patient',{
+        fetch('https://peaceful-wave-68888.herokuapp.com/patient',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(data)

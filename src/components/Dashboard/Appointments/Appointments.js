@@ -12,7 +12,7 @@ const Appointments = () => {
 		setSelectedDate(date);
 	};
 	useEffect(() => {
-		fetch('http://localhost:8080/appointmentByDate', {
+		fetch('https://peaceful-wave-68888.herokuapp.com/appointmentByDate', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ date: selectedDate }),

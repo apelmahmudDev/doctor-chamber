@@ -5,7 +5,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const Patients = () => {
 	const [appointments, setAppointments] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:8080/allPatients')
+		fetch('https://peaceful-wave-68888.herokuapp.com/allPatients')
 			.then((res) => res.json())
 			.then((data) => setAppointments(data));
 	}, []);
